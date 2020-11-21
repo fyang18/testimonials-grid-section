@@ -1,0 +1,99 @@
+/*
+# Front-end Style Guide
+
+## Layout
+
+The designs were created to the following widths:
+
+- Mobile: 375px
+- Desktop: 1440px
+
+## Colors
+
+### Primary
+
+Moderate violet: hsl(263, 55%, 52%)
+Very dark grayish blue: hsl(217, 19%, 35%)
+Very dark blackish blue: hsl(219, 29%, 14%)
+White: hsl(0, 0%, 100%)
+
+### Neutral
+
+Light gray: hsl(0, 0%, 81%)
+Light grayish blue: hsl(210, 46%, 95%)
+
+Note for text colors:
+
+1. "Verified Graduate" has the same color as the person's name with 50% opacity
+2. Review paragraphs inside the quotations have the same color as well, but are at 70% opacity
+
+## Typography
+
+### Body Copy
+
+- Font size: 13px
+
+### Font
+
+- Family: [Barlow Semi Condensed](https://fonts.google.com/specimen/Barlow+Semi+Condensed)
+- Weights: 500, 600
+
+*/
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: hsl(210, 46%, 95%);
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    font-size: 13px;
+}
+
+#daniel { grid-area: daniel; }
+#jonathan { grid-area: jonathan; }
+#jeanette { grid-area: jeanette; }
+#patrick { grid-area: patrick; }
+#kira { grid-area: kira; }
+
+.gridContainer {
+    display: grid;
+    grid-template-areas: 
+    'daniel daniel jonathan kira'
+    'jeanette patrick patrick kira';
+    grid-gap: 30px;
+    padding: 164px;
+}
+
+.card {
+    padding: 30px;
+    border-radius: 4px;
+}
+
+.id {
+display: flex;
+align-items: center;
+}
+
+.id img {
+    border: 2px solid #a37dd2;
+    border-radius: 50%;
+}
+
+.name {
+    margin-left: 16px;
+}
+
+h3, p {
+    margin-top: 25px;
+}
+
+#daniel {
+    background-color: hsl(263, 55%, 52%);
+    background-image: url(images/bg-pattern-quotation.svg);
+    background-repeat: no-repeat;
+    background-position: 80% top;
+}
+
