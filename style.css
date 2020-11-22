@@ -1,45 +1,3 @@
-/*
-# Front-end Style Guide
-
-## Layout
-
-The designs were created to the following widths:
-
-- Mobile: 375px
-- Desktop: 1440px
-
-## Colors
-
-### Primary
-
-Moderate violet: hsl(263, 55%, 52%)
-Very dark grayish blue: hsl(217, 19%, 35%)
-Very dark blackish blue: hsl(219, 29%, 14%)
-White: hsl(0, 0%, 100%)
-
-### Neutral
-
-Light gray: hsl(0, 0%, 81%)
-Light grayish blue: hsl(210, 46%, 95%)
-
-Note for text colors:
-
-1. "Verified Graduate" has the same color as the person's name with 50% opacity
-2. Review paragraphs inside the quotations have the same color as well, but are at 70% opacity
-
-## Typography
-
-### Body Copy
-
-- Font size: 13px
-
-### Font
-
-- Family: [Barlow Semi Condensed](https://fonts.google.com/specimen/Barlow+Semi+Condensed)
-- Weights: 500, 600
-
-*/
-
 * {
     box-sizing: border-box;
     margin: 0;
@@ -49,7 +7,7 @@ Note for text colors:
 body {
     background-color: hsl(210, 46%, 95%);
     font-family: 'Barlow Semi Condensed', sans-serif;
-    font-size: 13px;
+    font-size: 14px;
 }
 
 #daniel { grid-area: daniel; }
@@ -60,40 +18,230 @@ body {
 
 .gridContainer {
     display: grid;
+    height: 572px;
+    width: 1110px;
     grid-template-areas: 
     'daniel daniel jonathan kira'
     'jeanette patrick patrick kira';
     grid-gap: 30px;
-    padding: 164px;
+    margin: 164px auto;
 }
 
 .card {
     padding: 30px;
-    border-radius: 4px;
+    border-radius: 8px;
 }
 
 .id {
-display: flex;
-align-items: center;
+    display: flex;
+    align-items: center;
 }
 
-.id img {
-    border: 2px solid #a37dd2;
-    border-radius: 50%;
+.id img{
+    height: 32px;
+    width: 32px;
 }
 
 .name {
     margin-left: 16px;
 }
 
-h3, p {
-    margin-top: 25px;
+h3 {
+    font-size: 17px;
 }
+
+h3, p {
+    margin-top: 16px;
+}
+
+
+/*************************Daniel********************************/
 
 #daniel {
     background-color: hsl(263, 55%, 52%);
     background-image: url(images/bg-pattern-quotation.svg);
     background-repeat: no-repeat;
     background-position: 80% top;
+    height: 282px;
+    min-width: 540px;
 }
 
+#daniel .id img {
+    border: 2px solid #a37dd2;
+    border-radius: 50%;
+}
+
+#daniel h3, #daniel h4 {
+    color: hsl(0, 0%, 100%);
+}
+
+#daniel span {
+    color: #a37dd2;
+}
+
+#daniel p {
+    color: hsl(0, 0%, 100%);
+    opacity: 0.5;
+}
+
+/*************************Jonathan********************************/
+
+#jonathan {
+    background-color: hsl(217, 19%, 35%);
+    height: 282px;
+    min-width: 255px;
+
+}
+
+#jonathan span {
+    color: hsl(0, 0%, 100%);
+    opacity: 0.5;
+}
+
+#jonathan h3, #jonathan h4 {
+    color: hsl(0, 0%, 100%);
+}
+
+#jonathan p {
+    color: hsl(0, 0%, 100%);
+    opacity: 0.5;
+}
+
+#jonathan .id img {
+    border: none;
+    border-radius: 50%;
+
+}
+/*************************Jeanette********************************/
+
+#jeanette {
+    background-color: hsl(0, 0%, 100%);
+    height: 266px;
+    min-width: 255px;
+
+}
+
+#jeanette h3, #jeanette h4 {
+    color: hsl(217, 19%, 35%);
+    opacity: 0.8;
+}
+
+#jeanette span{
+    color: hsl(217, 19%, 35%);
+    opacity: 0.5;
+}
+
+#jeanette p {
+    color: hsl(217, 19%, 35%);
+    opacity: 0.5;
+}
+
+#jeanette .id img {
+    border: none;
+    border-radius: 50%;
+
+}
+
+/*************************Patrick********************************/
+
+#patrick {
+    background-color: hsl(219, 29%, 14%);
+    height: 266px;
+    min-width: 540px;
+
+}
+
+#patrick h3, #patrick h4 {
+    color: hsl(0, 0%, 100%);
+}
+
+#patrick span {
+    color: hsl(0, 0%, 100%);
+    opacity: 0.5;
+}
+
+#patrick p {
+    color: hsl(0, 0%, 100%);
+    opacity: 0.5;
+}
+
+#patrick .id img {
+    border: 2px solid #a37dd2;
+    border-radius: 50%;
+
+}
+
+/*************************Kira********************************/
+
+#kira {
+    background-color: hsl(0, 0%, 100%);
+    height: 572px;
+    min-width: 255px;
+}
+
+#kira h3, #kira h4 {
+    color: hsl(217, 19%, 35%);
+    opacity: 0.8;
+}
+
+#kira span{
+    color: hsl(217, 19%, 35%);
+    opacity: 0.5;
+}
+
+#kira p {
+    color: hsl(217, 19%, 35%);
+    opacity: 0.5;
+}
+
+#kira .id img {
+    border: none;
+    border-radius: 50%;
+
+}
+
+/*************************Footer************************************/
+.attribution {
+    text-align: center;
+}
+
+
+
+/*====================================================================*/
+
+@media screen and (max-width: 1400px) {
+    .gridContainer {
+        height: 100vw;
+        width: 85vw;
+        grid-template-areas: 
+        'daniel jonathan'
+        'jeanette patrick'
+        'kira kira';
+    }
+
+    #daniel, #jonathan, #jeanette, #patrick, #kira {
+        min-width: 350px;
+        height: 100%;
+    }
+    
+}
+
+@media screen and (max-width: 870px) {
+    .gridContainer {
+        display: grid;
+        height: 100vw;
+        width: 90vw;
+        grid-template-areas: 
+        'daniel'
+        'jonathan'
+        'jeanette'
+        'patrick' 
+        'kira';
+        margin: 70px auto;
+    }
+
+    #daniel, #jonathan, #jeanette, #patrick, #kira {
+        min-width: 327px;
+        height: 100%;
+    }
+}
